@@ -1,0 +1,674 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>30/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jan 28 20:15:47 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>645 seconds (645388 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nicor.tests.TC_01_001.testHomePage()'><b>testHomePage</b><br>Test class: com.nicor.tests.TC_01_001</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Organisations&apos;)]&quot;}
+  (Session info: chrome=88.0.4324.104)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T19:05:32.194Z&apos;
+System info: host: &apos;DESKTOP-L3RQ4M2&apos;, ip: &apos;192.168.43.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.29.461591 (62ebf098771772..., userDataDir: C:\Users\Admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 88.0.4324.104, webStorageEnabled: true}
+Session ID: 9881b81df1f9f842d880c620ee5ee738
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;Organisations&apos;)]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.getText(Unknown Source)
+	at com.nicor.generic.BasePage.verifyElement(BasePage.java:55)
+	at com.nicor.pages.NicorHome.verifyTheElement(NicorHome.java:161)
+	at com.nicor.tests.TC_01_001.testHomePage(TC_01_001.java:47)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace98351968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace98351968'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Organisations&apos;)]&quot;}
+  (Session info: chrome=88.0.4324.104)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T19:05:32.194Z&apos;
+System info: host: &apos;DESKTOP-L3RQ4M2&apos;, ip: &apos;192.168.43.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.29.461591 (62ebf098771772..., userDataDir: C:\Users\Admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 88.0.4324.104, webStorageEnabled: true}
+Session ID: 9881b81df1f9f842d880c620ee5ee738
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;Organisations&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.getText(Unknown Source)
+	at com.nicor.generic.BasePage.verifyElement(BasePage.java:55)
+	at com.nicor.pages.NicorHome.verifyTheElement(NicorHome.java:161)
+	at com.nicor.tests.TC_01_001.testHomePage(TC_01_001.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>30</td>
+<td>com.nicor.tests.TC_01_001@3d0f8e03</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_01_007.testresearchersPage()'><b>testresearchersPage</b><br>Test class: com.nicor.tests.TC_01_007</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at com.nicor.generic.BasePage.verifyTitle(BasePage.java:38)
+	at com.nicor.tests.TC_01_007.testresearchersPage(TC_01_007.java:35)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace503595296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace503595296'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.fail(Assert.java:95)
+	at com.nicor.generic.BasePage.verifyTitle(BasePage.java:38)
+	at com.nicor.tests.TC_01_007.testresearchersPage(TC_01_007.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>12</td>
+<td>com.nicor.tests.TC_01_007@73d4cc9e</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_01_005.testresearchersPage()'><b>testresearchersPage</b><br>Test class: com.nicor.tests.TC_01_005</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Organisations&apos;)]&quot;}
+  (Session info: chrome=88.0.4324.104)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T19:05:32.194Z&apos;
+System info: host: &apos;DESKTOP-L3RQ4M2&apos;, ip: &apos;192.168.43.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.29.461591 (62ebf098771772..., userDataDir: C:\Users\Admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 88.0.4324.104, webStorageEnabled: true}
+Session ID: 2e3be7c704e947f6d2c972ada050420a
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;Organisations&apos;)]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.nicor.pages.NicorHome.clickOnOrganisationsLink(NicorHome.java:184)
+	at com.nicor.tests.TC_01_005.testresearchersPage(TC_01_005.java:26)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace789982400", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace789982400'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(text(),&apos;Organisations&apos;)]&quot;}
+  (Session info: chrome=88.0.4324.104)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.8.1&apos;, revision: &apos;6e95a6684b&apos;, time: &apos;2017-12-01T19:05:32.194Z&apos;
+System info: host: &apos;DESKTOP-L3RQ4M2&apos;, ip: &apos;192.168.43.153&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_271&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.29.461591 (62ebf098771772..., userDataDir: C:\Users\Admin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 88.0.4324.104, webStorageEnabled: true}
+Session ID: 2e3be7c704e947f6d2c972ada050420a
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;Organisations&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.nicor.pages.NicorHome.clickOnOrganisationsLink(NicorHome.java:184)
+	at com.nicor.tests.TC_01_005.testresearchersPage(TC_01_005.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
+<td>com.nicor.tests.TC_01_005@5427c60c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nicor.tests.TC_02_001.testAboutNicorPage()'><b>testAboutNicorPage</b><br>Test class: com.nicor.tests.TC_02_001</td>
+<td></td>
+<td>2</td>
+<td>com.nicor.tests.TC_02_001@7e9a5fbe</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_005.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_005<br/>
+<a href="#Output-2048537720" onClick='toggleBox("Output-2048537720", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2048537720" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2048537720">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>com.nicor.tests.TC_02_005@4ae82894</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_004.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_004<br/>
+<a href="#Output-1470868839" onClick='toggleBox("Output-1470868839", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1470868839" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1470868839">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+clicked acei<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_004@543788f3</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_026.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_026<br/>
+<a href="#Output-885910946" onClick='toggleBox("Output-885910946", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-885910946" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-885910946">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>com.nicor.tests.TC_02_026@6d3af739</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_007.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_007<br/>
+<a href="#Output-1207231495" onClick='toggleBox("Output-1207231495", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1207231495" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1207231495">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>com.nicor.tests.TC_02_007@1da51a35</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_006.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_006<br/>
+<a href="#Output-2092709730" onClick='toggleBox("Output-2092709730", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2092709730" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2092709730">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_006@16022d9d</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_023.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_023<br/>
+<a href="#Output-1555990397" onClick='toggleBox("Output-1555990397", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1555990397" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1555990397">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_023@44a3ec6b</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_022.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_022<br/>
+<a href="#Output-1348916831" onClick='toggleBox("Output-1348916831", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1348916831" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1348916831">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_022@71623278</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_003.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_003<br/>
+<a href="#Output-79290250" onClick='toggleBox("Output-79290250", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-79290250" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-79290250">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+elements present in a section<br/>
+all elements are present in a section<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>com.nicor.tests.TC_02_003@768b970c</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_025.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_025<br/>
+<a href="#Output-192428201" onClick='toggleBox("Output-192428201", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-192428201" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-192428201">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_025@5a4041cc</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_002.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_002<br/>
+<a href="#Output-867093003" onClick='toggleBox("Output-867093003", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-867093003" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-867093003">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>com.nicor.tests.TC_02_002@15b3e5b</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_024.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_024<br/>
+<a href="#Output-2116179210" onClick='toggleBox("Output-2116179210", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2116179210" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2116179210">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_024@61ca2dfa</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_021.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_021<br/>
+<a href="#Output-1765702" onClick='toggleBox("Output-1765702", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1765702" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1765702">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+elements present in a section<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>com.nicor.tests.TC_02_021@4b53f538</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_020.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_020<br/>
+<a href="#Output-1323531427" onClick='toggleBox("Output-1323531427", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1323531427" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1323531427">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>com.nicor.tests.TC_02_020@134593bf</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_009.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_009<br/>
+<a href="#Output-812143047" onClick='toggleBox("Output-812143047", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-812143047" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-812143047">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_009@4bb4de6a</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_008.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_008<br/>
+<a href="#Output-1437988306" onClick='toggleBox("Output-1437988306", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1437988306" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1437988306">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_008@7ba18f1b</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_016.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_016<br/>
+<a href="#Output-300604602" onClick='toggleBox("Output-300604602", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-300604602" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-300604602">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>com.nicor.tests.TC_02_016@2f8f5f62</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_015.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_015<br/>
+<a href="#Output-2023917549" onClick='toggleBox("Output-2023917549", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2023917549" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2023917549">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_015@1068e947</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_018.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_018<br/>
+<a href="#Output-1648582256" onClick='toggleBox("Output-1648582256", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1648582256" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1648582256">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_018@7dc222ae</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_017.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_017<br/>
+<a href="#Output-1530957251" onClick='toggleBox("Output-1530957251", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1530957251" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1530957251">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_017@aecb35a</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_012.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_012<br/>
+<a href="#Output-1058822905" onClick='toggleBox("Output-1058822905", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1058822905" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1058822905">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>com.nicor.tests.TC_02_012@5fcd892a</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_011.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_011<br/>
+<a href="#Output-500885941" onClick='toggleBox("Output-500885941", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-500885941" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-500885941">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>com.nicor.tests.TC_02_011@8b87145</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_014.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_014<br/>
+<a href="#Output-567852222" onClick='toggleBox("Output-567852222", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-567852222" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-567852222">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>com.nicor.tests.TC_02_014@6483f5ae</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_013.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_013<br/>
+<a href="#Output-1758893871" onClick='toggleBox("Output-1758893871", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1758893871" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1758893871">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+elements present in a section<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>com.nicor.tests.TC_02_013@b9afc07</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_010.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_010<br/>
+<a href="#Output-917568725" onClick='toggleBox("Output-917568725", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-917568725" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-917568725">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_010@382db087</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_02_019.testGlossaryPage()'><b>testGlossaryPage</b><br>Test class: com.nicor.tests.TC_02_019<br/>
+<a href="#Output-290096578" onClick='toggleBox("Output-290096578", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-290096578" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-290096578">
+clicked abt NICOR<br/>
+clicked abt Glossarylink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>com.nicor.tests.TC_02_019@6366ebe0</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_01_002.testHospitalsPage()'><b>testHospitalsPage</b><br>Test class: com.nicor.tests.TC_01_002</td>
+<td></td>
+<td>2</td>
+<td>com.nicor.tests.TC_01_002@57f23557</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_01_006.testresearchersPage()'><b>testresearchersPage</b><br>Test class: com.nicor.tests.TC_01_006</td>
+<td></td>
+<td>3</td>
+<td>com.nicor.tests.TC_01_006@80169cf</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_01_004.testresearchersPage()'><b>testresearchersPage</b><br>Test class: com.nicor.tests.TC_01_004</td>
+<td></td>
+<td>2</td>
+<td>com.nicor.tests.TC_01_004@15bfd87</td></tr>
+<tr>
+<td title='com.nicor.tests.TC_01_003.testresearchersPage()'><b>testresearchersPage</b><br>Test class: com.nicor.tests.TC_01_003<br/>
+<a href="#Output-1200048933" onClick='toggleBox("Output-1200048933", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1200048933" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1200048933">
+clicked researchers<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.nicor.tests.TC_01_003@543e710e</td></tr>
+</table><p>
+</body>
+</html>

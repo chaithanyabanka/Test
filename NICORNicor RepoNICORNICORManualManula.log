@@ -1,0 +1,19 @@
+28/01/2021 20:29:47 devpinoyLogger Nicor Opened
+28/01/2021 20:29:47 devpinoyLogger ***$$ Started TC_01_001  Test Home page $$**
+28/01/2021 20:29:47 devpinoyLogger Title is matching :NICOR
+28/01/2021 20:29:47 devpinoyLogger Element is present :Hospitals
+28/01/2021 20:29:47 devpinoyLogger hosp
+28/01/2021 20:29:47 devpinoyLogger Element is present :Researchers
+28/01/2021 20:29:47 devpinoyLogger research
+28/01/2021 20:29:48 devpinoyLogger Element is present :Charities & Public
+28/01/2021 20:29:48 devpinoyLogger research
+28/01/2021 20:30:18 devpinoyLogger Nicor Closed Successfully
+28/01/2021 20:30:30 devpinoyLogger Nicor Opened
+28/01/2021 20:30:30 devpinoyLogger Title is matching :NICOR
+28/01/2021 20:30:32 devpinoyLogger clicked audit programme
+28/01/2021 20:30:42 devpinoyLogger Title is not matching : Actual title is :NICOR | COVID-19 and NICOR
+28/01/2021 20:30:43 devpinoyLogger Nicor Closed Successfully
+28/01/2021 20:30:54 devpinoyLogger Nicor Opened
+28/01/2021 20:30:54 devpinoyLogger ***$$ Started TC_01_005  Test Researches page $$**
+28/01/2021 20:30:54 devpinoyLogger Title is matching :NICOR
+28/01/2021 20:31:08 devpinoyLogger Nicor Closed Successfully
